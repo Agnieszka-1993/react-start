@@ -1,0 +1,28 @@
+@import '../../styles/settings.scss';
+
+.columnForm {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.columnForm label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 767px) {
+    .columnForm {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .columnForm label {
+        flex-direction: column;
+        align-items: center;
+    }
+}
