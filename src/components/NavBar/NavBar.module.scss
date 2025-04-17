@@ -1,0 +1,46 @@
+@import '../../styles/settings.scss';
+
+.navbar {
+  background-color: darken($color-dark, 3%);
+  padding: 10px 0;
+}
+
+.navbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+
+  li {
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+
+      &:hover {
+        color: lighten(white, 20%);
+      }
+    }
+  }
+}
+
+.link {
+  color: white;
+}
+
+.linkActive {
+  color: $color-warning !important;
+  font-weight: bold;
+}
