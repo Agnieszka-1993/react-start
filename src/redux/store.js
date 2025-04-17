@@ -1,9 +1,17 @@
 import { legacy_createStore as createStore, combineReducers } from 'redux';
 import initialState from './initialState';
 import shortid from 'shortid';
+import strContains from '../utils/strContains'
 
+//selectors
+export const getFilteredCards = ({ cards, searchString }, columnId) => cards
+  .filter(card => card.columnId === columnId && strContains(card.title, searchString));
 
 export const addCard = (payload) => ({ type: 'ADD_CARD', payload });
+export const updateSearchString = payload => ({type: 'UPDATE_SEARCHSTRING', payload,});
+export const getAllColumns = state => state.columns;
+export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
+
 
 
 const cardsReducer = (statePart = [], action) => {
@@ -24,10 +32,20 @@ const columnsReducer = (statePart = [], action) => {
   }
 };
 
+const searchReducer = (statePart = '', action) => {
+  switch(action.type) {
+    case 'UPDATE_SEARCHSTRING':
+      return action.payload;
+    default:
+      return statePart;
+  }
+};
+
 
 const rootReducer = combineReducers({
   cards: cardsReducer,
   columns: columnsReducer,
+  searchString: searchReducer,
 });
 
 
