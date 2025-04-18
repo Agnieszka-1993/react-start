@@ -12,36 +12,12 @@ const NavBar = () => {
             <i className="fa fa-tasks" aria-hidden="true"></i>
           </NavLink>
           <ul className={styles.links}>
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? `${styles.link} ${styles.linkActive}` : styles.link
-                }
-              >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/favorite"
-                className={({ isActive }) =>
-                  isActive ? `${styles.link} ${styles.linkActive}` : styles.link
-                }
-              >
-                Favorite
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive ? `${styles.link} ${styles.linkActive}` : styles.link
-                }
-              >
-                About
-              </NavLink>
-            </li>
+            <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+              to="/">Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+              to="/favorite">Favorite</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+              to="/about">About</NavLink></li>
           </ul>
         </div>
       </Container>
