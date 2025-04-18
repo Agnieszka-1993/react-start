@@ -2,7 +2,8 @@ import styles from './List.module.scss';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams, Navigate } from 'react-router-dom';
-import { getListById, getColumnsByList } from '../../redux/store';
+import { getColumnsByList } from '../../redux/reducers/columnsReducer';
+import { getListById } from '../../redux/reducers/listsReducer'
 import Column from '../Column/Column';
 import ColumnForm from '../ColumnForm/ColumnForm';
 import PageTitle from '../PageTitle/PageTitle';
