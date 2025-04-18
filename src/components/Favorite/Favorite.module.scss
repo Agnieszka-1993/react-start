@@ -1,3 +1,4 @@
+@use "sass:math";
 @import '../../styles/settings.scss';
 
 .favorite {
@@ -7,4 +8,8 @@
 
 h1{
     color: darkgrey;
+}
+
+ul{
+    padding: math.div($base-size, 2) 0;
 }
