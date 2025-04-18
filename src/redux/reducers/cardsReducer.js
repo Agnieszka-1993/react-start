@@ -10,7 +10,7 @@ export const getFilteredCards = (state, columnId) => {
   );
 };
 
-const ADD_CARD = 'ADD_CARD';
+const ADD_CARD = 'app/cards/ADD_CARD';
 const CARD_FAVORITE = 'app/cards/TOGGLE_CARD_FAVORITE';
 const REMOVE_CARD = 'app/cards/REMOVE_CARD';
 
